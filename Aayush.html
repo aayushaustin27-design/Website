@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aayush Lakhara | Aspiring AI Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lightBlue: '#a0d8f1',
+                        darkBlue: '#004080',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        .typing-animation {
+            overflow: hidden;
+            border-right: .15em solid #004080;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #004080; }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body class="bg-lightBlue font-poppins">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-darkBlue">Aayush Lakhara</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-darkBlue hover:text-lightBlue transition">Home</a>
+                <a href="#about" class="text-darkBlue hover:text-lightBlue transition">About</a>
+                <a href="#skills" class="text-darkBlue hover:text-lightBlue transition">Skills</a>
+                <a href="#projects" class="text-darkBlue hover:text-lightBlue transition">Projects</a>
+                <a href="#contact" class="text-darkBlue hover:text-lightBlue transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-darkBlue focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-white py-4 px-6 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-darkBlue hover:text-lightBlue transition">Home</a>
+                <a href="#about" class="text-darkBlue hover:text-lightBlue transition">About</a>
+                <a href="#skills" class="text-darkBlue hover:text-lightBlue transition">Skills</a>
+                <a href="#projects" class="text-darkBlue hover:text-lightBlue transition">Projects</a>
+                <a href="#contact" class="text-darkBlue hover:text-lightBlue transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-16 pb-12 bg-lightBlue">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-darkBlue mb-4">Aayush Lakhara</h1>
+                <div class="text-xl md:text-2xl lg:text-3xl text-darkBlue mb-8 typing-animation">
+                    12th Grade Student | Aspiring AI Software Engineer | Lifelong Learner
+                </div>
+                <a href="file:///C:/Users/LENOVO/Downloads/Resume.pdf" target="_blank" class="inline-block bg-darkBlue text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-900 transition">View Resume</a>
+            </div>
+            <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+                <div class="w-64 h-64 md:w-80 md:h-80 bg-darkBlue rounded-full overflow-hidden border-4 border-white shadow-xl">
+                    <img src="https://placehold.co/400x400/a0d8f1/004080?text=AL" alt="Aayush Lakhara" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-darkBlue mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Motivated and curious 12th-grade student passionate about Artificial Intelligence, Machine Learning, and Software Development. 
+                        Skilled in problem-solving and eager to build real-world solutions using technology. 
+                        Actively seeking opportunities to learn, collaborate, and contribute to innovative AI-driven projects.
+                    </p>
+                    <div class="mt-8 flex space-x-4">
+                        <a href="#contact" class="bg-darkBlue text-white px-5 py-2 rounded-lg shadow-md hover:bg-blue-900 transition">Get in Touch</a>
+                        <a href="#projects" class="border-2 border-darkBlue text-darkBlue px-5 py-2 rounded-lg shadow-md hover:bg-darkBlue hover:text-white transition">View Projects</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="w-full max-w-md bg-lightBlue p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-semibold text-darkBlue mb-4">Education & Interests</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-darkBlue text-white p-2 rounded-full mr-4">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-darkBlue">12th Grade Student</h4>
+                                    <p class="text-gray-700">Science Stream with Computer Science</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-darkBlue text-white p-2 rounded-full mr-4">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-darkBlue">AI & ML Enthusiast</h4>
+                                    <p class="text-gray-700">Passionate about machine learning algorithms and AI applications</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-darkBlue text-white p-2 rounded-full mr-4">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-darkBlue">Software Development</h4>
+                                    <p class="text-gray-700">Developing solutions through code and technology</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-lightBlue">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-darkBlue mb-12">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <div class="skill-card bg-white p-6 rounded-xl shadow-md transition cursor-pointer">
+                    <div class="text-darkBlue text-4xl mb-4">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-darkBlue mb-2">Python</h3>
+                    <p class="text-gray-700">Beginner level with experience in basic programming concepts, data structures, and simple applications.</p>
+                    <div class="mt-4 bg-lightBlue h-2 rounded-full">
+                        <div class="bg-darkBlue h-2 rounded-full w-3/5"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill 2 -->
+                <div class="skill-card bg-white p-6 rounded-xl shadow-md transition cursor-pointer">
+                    <div class="text-darkBlue text-4xl mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-darkBlue mb-2">AI & ML Fundamentals</h3>
+                    <p class="text-gray-700">Understanding of basic machine learning concepts, algorithms, and their applications.</p>
+                    <div class="mt-4 bg-lightBlue h-2 rounded-full">
+                        <div class="bg-darkBlue h-2 rounded-full w-2/5"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill 3 -->
+                <div class="skill-card bg-white p-6 rounded-xl shadow-md transition cursor-pointer">
+                    <div class="text-darkBlue text-4xl mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-darkBlue mb-2">Web Development</h3>
+                    <p class="text-gray-700">Knowledge of HTML, CSS, JavaScript and basic front-end development principles.</p>
+                    <div class="mt-4 bg-lightBlue h-2 rounded-full">
+                        <div class="bg-darkBlue h-2 rounded-full w-4/5"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill 4 -->
+                <div class="skill-card bg-white p-6 rounded-xl shadow-md transition cursor-pointer">
+                    <div class="text-darkBlue text-4xl mb-4">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-darkBlue mb-2">Problem-Solving</h3>
+                    <p class="text-gray-700">Strong analytical skills with ability to break down complex problems and find efficient solutions.</p>
+                    <div class="mt-4 bg-lightBlue h-2 rounded-full">
+                        <div class="bg-darkBlue h-2 rounded-full w-4/5"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill 5 -->
+                <div class="skill-card bg-white p-6 rounded-xl shadow-md transition cursor-pointer">
+                    <div class="text-darkBlue text-4xl mb-4">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-darkBlue mb-2">Data Analysis</h3>
+                    <p class="text-gray-700">Basic skills in data interpretation, visualization, and drawing insights from data.</p>
+                    <div class="mt-4 bg-lightBlue h-2 rounded-full">
+                        <div class="bg-darkBlue h-2 rounded-full w-3/5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-darkBlue mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-lightBlue p-6 rounded-xl shadow-md">
+                    <div class="mb-4">
+                        <span class="bg-darkBlue text-white text-sm font-medium px-3 py-1 rounded-full">Featured</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-darkBlue mb-2">Impact Ideathon – 2nd Rank (2025)</h3>
+                    <p class="text-gray-700 mb-4">Developed an AI-based solution to address real-world problems, earning 2nd place in a competitive ideathon.</p>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-darkBlue text-white p-2 rounded-full mr-3">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <span class="text-darkBlue font-medium">Achievement: 2nd Rank</span>
+                    </div>
+                    <a href="file:///C:/Users/LENOVO/Downloads/WhatsApp%20Image%202025-09-15%20at%2011.11.01%20PM.jpeg" class="text-darkBlue font-medium hover:underline inline-flex items-center">
+                        View Certificate <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-lightBlue p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold text-darkBlue mb-2">Python ML Experiments</h3>
+                    <p class="text-gray-700 mb-4">Collection of small machine learning projects and experiments using Python and popular ML libraries.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-darkBlue text-white text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                        <span class="bg-darkBlue text-white text-sm font-medium px-3 py-1 rounded-full">Scikit-learn</span>
+                        <span class="bg-darkBlue text-white text-sm font-medium px-3 py-1 rounded-full">Pandas</span>
+                    </div>
+                    <a href="#" class="text-darkBlue font-medium hover:underline inline-flex items-center">
+                        View Projects <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-lightBlue p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold text-darkBlue mb-2">Data Visualization Dashboard</h3>
+                    <p class="text-gray-700 mb-4">Interactive dashboard for visualizing and analyzing datasets with various chart types and filters.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-darkBlue text-white text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                        <span class="bg-darkBlue text-white text-sm font-medium px-3 py-1 rounded-full">D3.js</span>
+                        <span class="bg-darkBlue text-white text-sm font-medium px-3 py-1 rounded-full">HTML/CSS</span>
+                    </div>
+                    <a href="#" class="text-darkBlue font-medium hover:underline inline-flex items-center">
+                        View Demo <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card bg-lightBlue p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold text-darkBlue mb-2">AI Chatbot Prototype</h3>
+                    <p class="text-gray-700 mb-4">Basic conversational AI chatbot that can answer questions and perform simple tasks using natural language processing.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-darkBlue text-white text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                        <span class="bg-darkBlue text-white text-sm font-medium px-3 py-1 rounded-full">NLTK</span>
+                        <span class="bg-darkBlue text-white text-sm font-medium px-3 py-1 rounded-full">TensorFlow</span>
+                    </div>
+                    <a href="#" class="text-darkBlue font-medium hover:underline inline-flex items-center">
+                        View Code <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-lightBlue">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-darkBlue mb-12">Get In Touch</h2>
+            <div class="flex flex-col md:flex-row gap-10">
+                <div class="md:w-1/2">
+                    <form class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-darkBlue font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-darkBlue">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-darkBlue font-medium mb-2">Your Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-darkBlue">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-darkBlue font-medium mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-darkBlue"></textarea>
+                        </div>
+                        <button type="submit" class="bg-darkBlue text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-900 transition w-full">Send Message</button>
+                    </form>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-xl font-semibold text-darkBlue mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="bg-darkBlue text-white p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-700">Email</p>
+                                    <a href="mailto:aayushlakhara@email.com" class="text-darkBlue font-medium">aayushlakhara@email.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-darkBlue text-white p-3 rounded-full mr-4">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-700">LinkedIn</p>
+                                    <a href="https://www.linkedin.com/in/aayush-lakhara-b45a2b380/" target="_blank" class="text-darkBlue font-medium">Aayush Lakhara</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-darkBlue text-white p-3 rounded-full mr-4">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-700">Instagram</p>
+                                    <a href="#" class="text-darkBlue font-medium">@aayush_lakhara</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10">
+                            <h4 class="text-lg font-semibold text-darkBlue mb-4">Let's connect</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.linkedin.com/in/aayush-lakhara-b45a2b380/" target="_blank" class="social-icon bg-darkBlue text-white p-3 rounded-full hover:bg-blue-900 transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-icon bg-darkBlue text-white p-3 rounded-full hover:bg-blue-900 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="mailto:aayushlakhara@email.com" class="social-icon bg-darkBlue text-white p-3 rounded-full hover:bg-blue-900 transition">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="#" class="social-icon bg-darkBlue text-white p-3 rounded-full hover:bg-blue-900 transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkBlue text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold">Aayush Lakhara</h3>
+                    <p class="text-lightBlue">Aspiring AI Software Engineer</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#home" class="text-white hover:text-lightBlue transition">Home</a>
+                    <a href="#about" class="text-white hover:text-lightBlue transition">About</a>
+                    <a href="#skills" class="text-white hover:text-lightBlue transition">Skills</a>
+                    <a href="#projects" class="text-white hover:text-lightBlue transition">Projects</a>
+                    <a href="#contact" class="text-white hover:text-lightBlue transition">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-6 pt-6 text-center text-sm text-gray-400">
+                <p>© 2023 Aayush Lakhara. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            function checkFade() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementBottom = element.getBoundingClientRect().bottom;
+                    const isVisible = (elementTop < window.innerHeight - 100) && (elementBottom > 0);
+                    
+                    if (isVisible) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+            
+            // Initial check
+            checkFade();
+            
+            // Listen for scroll events
+            window.addEventListener('scroll', checkFade);
+            
+            // Form submission
+            const contactForm = document.querySelector('form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! I will get back to you soon.');
+                contactForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>
